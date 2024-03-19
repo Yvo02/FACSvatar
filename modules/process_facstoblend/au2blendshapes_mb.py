@@ -60,12 +60,13 @@ class AUtoBlendShapes:
 
         # add values to new dict; based on manuelbastioni/animationengine.py
         for name, value in json_MB.items():
-            if value < 0.5:
-                name = name + "_min"
-                value = (0.5 - value) * 2
-            else:
-                name = name + "_max"
-                value = (value - 0.5) * 2
+
+            # if value < 0.5:
+            #     name = name + "_min"
+            #     value = (0.5 - value) * 2
+            # else:
+            #     name = name + "_max"
+            #     value = (value - 0.5) * 2
 
             # make dict less ugly
             dict_blendshape[name] = round(value, 5)
