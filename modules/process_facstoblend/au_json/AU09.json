@@ -8,7 +8,7 @@
     "Brow_Drop_R" : 0.20,
     "Cheek_Raise_L" : 0.40,
     "Cheek_Raise_R" : 0.40,
-    "Mouth_Close_Value" : 0.05,
+    "Mouth_Close" : 0.05,
     "Mouth_Up_Upper_L" : 0.20,
     "Mouth_Up_Upper_R" : 0.20,
     "Nose_Sneer_L" : 0.20,

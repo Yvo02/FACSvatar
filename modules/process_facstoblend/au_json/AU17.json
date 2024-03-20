@@ -2,8 +2,8 @@
   "metaproperties": {},
   "structural":
   {
-    "Mouth_Up_Value" : 0.80,
-    "Mouth_Chin_Up_Value": 1.25,
+    "Mouth_Up" : 0.80,
+    "Mouth_Chin_Up": 1.25,
     "Mouth_Close" : 0.05,
     "Mouth_Up_Upper_L" : 0.20,
     "Mouth_Up_Upper_R" : 0.20,
