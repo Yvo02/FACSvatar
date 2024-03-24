@@ -57,7 +57,7 @@
   "Jaw_Down": 0.0,
   "Nose_Sneer_L": 0.0,
   "Nose_Sneer_R": 0.0,
-  "Nose_Raise_L": 0.0,
-  "Nose_Raise_R": 0.0,
+  "Nose_Nostril_Raise_L" : 0.0,
+  "Nose_Nostril_Raise_R" : 0.0,
   "Nose_Tip_Up": 0.0
 }

@@ -2,11 +2,6 @@
 Script for generating Manual AUs which can be visualized in some softwares in real time
 '''
 
-import matplotlib as mpl
-mpl.rcParams['toolbar'] = 'None'
-mpl.use("TkAgg")
-
-
 import matplotlib.pyplot as plt
 
 from matplotlib.widgets import Slider, Button
@@ -18,9 +13,9 @@ from modules.gui.controller import Controller
 import numpy as np
 
 
-
-
-
+import matplotlib as mpl
+mpl.rcParams['toolbar'] = 'None'
+mpl.use("TkAgg")
 
 #Adapted from modules/gui/gui.ipynb
 
