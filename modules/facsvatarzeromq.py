@@ -158,28 +158,24 @@ class FACSvatarZeroMQ(abstractmethod(ABC)):
         return socket
 
     def start(self, async_func_list=None):
-        """Starts asynchronously any given async function"""
-
         # activate publishers / subscribers
         if async_func_list:
-            # capture ZeroMQ errors; ZeroMQ using asyncio doesn't print out errors
-            # TODO working properly?
             try:
-                asyncio.get_event_loop().run_until_complete(asyncio.wait(
-                    [func() for func in async_func_list]
-                ))
+                if sys.version_info < (3, 10):
+                    print("old python version")
+                    asyncio.get_event_loop().run_until_complete(asyncio.wait([func() for func in async_func_list]))
+                else:
+                    asyncio.run(self._run_tasks(async_func_list))
             except Exception as e:
                 logging.critical("Error with async function")
-                # print(e)
                 logging.error(traceback.format_exc())
-
             finally:
-                # TODO disconnect pub/sub
                 pass
-
         else:
             logging.info("No functions given, nothing to start")
 
+    async def _run_tasks(self, async_func_list):
+        await asyncio.gather(*[func() for func in async_func_list])
 
 # TODO option to enable / disable debugging
 class FACSvatarSocket:
