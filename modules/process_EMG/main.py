@@ -37,11 +37,13 @@ class FACSvatarMessages(FACSvatarZeroMQ):
         # metadata in message
         msg['frame'] = -1
         msg['timestamp'] = time.time()
+        msg['pose'] = {"pose_Rx" : 0.0, "pose_Ry" : 0.0, "pose_Rz" : 0.0}
 
         for intensity in y_values:
+            print(round(intensity/100, 2))
             msg['au_r'] = {"AU01": 0.0,
                             "AU02": 0.0,
-                            "AU04": round(intensity/100, 1),
+                            "AU04": round(intensity/100, 2),
                             "AU05": 0.0,
                             "AU06": 0.0,
                             "AU07": 0.0,
